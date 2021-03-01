@@ -1,0 +1,55 @@
+body {
+    background-color: #303030;
+    overflow: hidden;
+    user-select: none;
+    text-align: center;
+}
+
+span {
+    color: #47919e;
+    display: block;
+}
+
+#hideAll {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background-color: white;
+    z-index: 99;
+}
+
+.score {
+    display: inline-block;
+    float: left;
+    border: 1px solid #18d651;
+    padding: 5px;
+    width: 140px;
+    height: 56px;
+}
+
+.prestige {
+    display: inline-block;
+    float: center;
+    margin-right: 152px;
+}
+
+#score-first {
+    font-size: 13px;
+}
+
+#score-last {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+#score-first-number {
+    font-size: 20px;
+    display: inline-block;
+}
+
+#score-last-number {
+    font-size: 20px;
+    display: inline-block;
+}
