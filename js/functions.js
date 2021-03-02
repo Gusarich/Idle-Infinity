@@ -21,14 +21,21 @@ function pascalTriangle (k, n) {
     return n.fact().div(k.fact().mul(n.minus(k).fact())).round()
 }
 
+function purchaseGenerator () {
+    let price = ExpantaNum.pow(10, generator_last.index.mul(1))
+    if (score.a.gte(price)) {
+        score.a = score.a.minus(price)
+        generator_last.index = generator_last.index.plus(1)
+        tick_count = new ExpantaNum(0.001)
+    }
+}
+
 function tick () {
     time = Date.now()
     t = new ExpantaNum(time - last_tick)
     last_tick = time
     tick_count = tick_count.plus(t)
-    console.log(t)
-    console.log(score.a.plus(generator_first.amount.mul(generator_first.mult).div(t)).toString())
-    score.a = score.a.plus(generator_first.amount.mul(generator_first.mult).div(t))
+    score.a = score.a.plus(generator_first.amount.mul(generator_first.mult).round().div(t))
     generator_first.amount = pascalTriangle(generator_last.index, tick_count.div(1000))
 
     setText('score-first-number', normalize(score.a))

@@ -13,10 +13,12 @@ score = {
     'b': new ExpantaNum(0),
 }
 
+tick_speed = new ExpantaNum(10000)
+
 window.onload = () => {
     last_tick = Date.now()
-    tick_count = new ExpantaNum(0)
+    tick_count = new ExpantaNum(0.001)
     tick()
     document.getElementById("hideAll").style.display = "none";
-    setInterval(tick, 50)
+    setInterval(tick, tick_speed.toNumber())
 }
