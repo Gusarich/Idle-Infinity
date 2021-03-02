@@ -52,7 +52,7 @@ span {
 }
 
 .purchase-generator-cost {
-    display: inherit;
+    display: block;
 }
 
 #score-first {
